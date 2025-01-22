@@ -1,0 +1,19 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: busybox
+
+inputs:
+- name: test-scheduled-jobs
+
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    echo "Running scheduled test job"
+    # Add your test commands here
+    echo "Tests completed"
